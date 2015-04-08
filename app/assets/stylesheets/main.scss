@@ -1,3 +1,132 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$orange: #ff9800;
+$bloodOrange: #ff5722;
+$amber: #ffc107;
+$niceblue: #2392F3;
+$silver: #bdc3c7;
+
+// All todos and buttons
+input {
+	width: 80%;
+	height: 100%;
+	padding-left: 10%;
+	border: none;
+	border-radius: 2px 0 0 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
+	font-size: 2em;
+
+	&:focus {
+		box-shadow: 0 1px 0 $orange inset, 0 -1px 0 $orange inset, 1px 0 0 $orange inset, -1px 0 0 $orange inset, 0 0 4px rgba(35,146,243,0.5);
+    	outline: none;
+	}
+
+}
+button {
+	height: -webkit-calc(100% - 5px);
+	height: -moz-calc(100% - 5px);
+	height: -o-calc(100% - 5px);
+	height: -ms-calc(100% - 5px);
+	height: calc(100% - 5px);
+
+	width: 20%;
+	float: right;
+	border: none;
+
+	background: $amber;
+	border: $orange;
+	text-align: center;
+
+	background: -webkit-linear-gradient(top, $amber, $orange);
+	background: -moz-linear-gradient(top, $amber, $orange);
+	background: -o-linear-gradient(top, $amber, $orange);
+	background: -ms-linear-gradient(top, $amber, $orange);
+	background: linear-gradient(top, $amber, $orange);
+
+	-webkit-box-shadow: 0 5px 0 $bloodOrange;
+	-moz-box-shadow: 0 5px 0 $bloodOrange;
+	box-shadow: 0 5px 0 $bloodOrange;
+
+	-webkit-border-radius: 0 2px 2px 0;
+	-moz-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+
+	text-shadow: 0 2px 2px rgba(255, 255, 255, 0.1);
+
+	&:hover {
+		background: $orange;
+		border: $bloodOrange;
+
+		background: -webkit-linear-gradient(top, $orange, $bloodOrange);
+		background: -moz-linear-gradient(top, $orange, $bloodOrange);
+		background: -o-linear-gradient(top, $orange, $bloodOrange);
+		background: -ms-linear-gradient(top, $orange, $bloodOrange);
+		background: linear-gradient(top, $orange, $bloodOrange);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+#container {
+	width: 100%;
+	margin-top:100px;
+
+	#create-todo {
+		height: 75px;
+	}
+
+	#todo-list {
+		padding-left: 0;
+		list-style: none;
+		li {
+			height: 75px;
+			.todo {
+				border-bottom: 1px solid $silver;
+				height: 100%;
+				.display {
+					height: 100%;
+					.todo-content {
+						display: inline-block;
+						width: 90%;
+						line-height: 75px;
+						font-size: 2em;
+					}
+					.check {
+						display: inline-block;
+						width: 10%;
+						float: right;
+						height: 70px;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						-o-appearance: none;
+						-ms-appearance: none;
+						appearance: none;
+						background: white;
+						border-radius: 5px;
+						-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
+						-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
+						-o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
+						-ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
+						box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.05) inset;
+						&:hover, &:focus {
+							cursor: pointer;
+							outline: none;
+						}
+						&:checked {
+							background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Orange_check.svg/600px-Orange_check.svg.png");
+							background-size: 100% 100%;
+						}
+					}
+				}
+				.edit {
+					display: none;
+				}
+			}
+		}
+	}
+}
