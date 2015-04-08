@@ -3,7 +3,7 @@ Todo.Routers.Todos = Backbone.Router.extend({
 	routes: {
 		// Default route calls index function
 		'': 'index',
-		'/about': 'aboutPage'
+		'about': 'aboutPage'
 	},
 
 	// initialize function
@@ -22,5 +22,7 @@ Todo.Routers.Todos = Backbone.Router.extend({
 
 	// About function
 	aboutPage: function() {
+		var view = new Todo.Views.About();
+		$('#container').html(view.render().el);
 	}
 });

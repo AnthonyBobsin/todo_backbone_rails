@@ -6,8 +6,8 @@ window.Todo = {
   initialize: function() {
   	// Initialize the router
     new Todo.Routers.Todos();
-    // Start history, pushState: true removes need for # sign in urls
-    Backbone.history.start({ pushState: true });
+    // Start history
+    Backbone.history.start();
   }
 };
 
