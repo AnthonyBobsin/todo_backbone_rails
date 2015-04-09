@@ -22,6 +22,7 @@ Todo.Routers.Todos = Backbone.Router.extend({
 
 	// About function
 	aboutPage: function() {
+		console.log("In about function");
 		var view = new Todo.Views.About();
 		$('#container').html(view.render().el);
 	}

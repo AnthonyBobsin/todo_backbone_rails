@@ -8,8 +8,6 @@ Todo.Views.About = Backbone.View.extend({
 		contact: 'bobsinj@gmail.com'
 	},
 
-	className: 'aboutPage',
-
 	initialize: function() {
 
 	},

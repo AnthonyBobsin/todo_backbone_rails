@@ -40,20 +40,18 @@ Todo.Views.Todo = Backbone.View.extend({
 		// Get current completed status
 		var current = this.model.get('completed');
 		// Toggle and save this models completed status
-		this.model.set({completed: !current});
-		this.model.save();
+		this.model.save({completed: !current});
 	},
 
 	// Handle edits to model's title
 	editEntry: function(key) {
 		if (key.which == 13 || key == -999) {
 			// If edit field has input on button click
-			if ($('.todo-input').val()) {
+			if (this.$('.todo-input').val()) {
 				// get edit field value
-				var newTitle = $('.todo-input').val();
+				var newTitle = this.$('.todo-input').val();
 				// set and save new title
-				this.model.set({title: newTitle});
-				this.model.save();	
+				this.model.save({title: newTitle});
 			}
 			this.$('.edit').hide();
 			this.$('.display').show();

@@ -7,6 +7,7 @@ $bloodOrange: #ff5722;
 $amber: #ffc107;
 $niceblue: #2392F3;
 $silver: #bdc3c7;
+$clouds: #efefef;
 
 // All todos and buttons
 input {
@@ -53,7 +54,11 @@ button {
 	-moz-border-radius: 0 2px 2px 0;
 	border-radius: 0 2px 2px 0;
 
-	text-shadow: 0 2px 2px rgba(255, 255, 255, 0.1);
+	-webkit-text-shadow: 0 1px 1px $silver;
+	-moz-text-shadow: 0 1px 1px $silver;
+	-o-text-shadow: 0 1px 1px $silver;
+	-ms-text-shadow: 0 1px 1px $silver;
+	text-shadow: 0 1px 1px $silver;
 
 	&:hover {
 		background: $orange;
@@ -76,6 +81,58 @@ button {
 	width: 100%;
 	margin-top:100px;
 
+	.linkTab {
+		background: $amber;
+		border: $orange;
+
+		background: -webkit-linear-gradient(top, $amber, $orange);
+		background: -moz-linear-gradient(top, $amber, $orange);
+		background: -o-linear-gradient(top, $amber, $orange);
+		background: -ms-linear-gradient(top, $amber, $orange);
+		background: linear-gradient(top, $amber, $orange);
+		padding: 15px 40px;
+		line-height: 40px;
+
+		border-radius: 5px 5px 0 0;
+		
+		-webkit-text-shadow: 0 1px 1px $silver;
+		-moz-text-shadow: 0 1px 1px $silver;
+		-o-text-shadow: 0 1px 1px $silver;
+		-ms-text-shadow: 0 1px 1px $silver;
+		text-shadow: 0 1px 1px $silver;
+
+		color: black;
+
+		&:hover, &:focus {
+			text-decoration: none;
+
+			background: $orange;
+			border: $bloodOrange;
+
+			background: -webkit-linear-gradient(top, $orange, $bloodOrange);
+			background: -moz-linear-gradient(top, $orange, $bloodOrange);
+			background: -o-linear-gradient(top, $orange, $bloodOrange);
+			background: -ms-linear-gradient(top, $orange, $bloodOrange);
+			background: linear-gradient(top, $orange, $bloodOrange);
+
+		}
+	}
+
+	#todos, #aboutPage {
+		background: white;
+		border: $clouds;
+
+		background: -webkit-linear-gradient(top, white, $clouds);
+		background: -moz-linear-gradient(top, white, $clouds);
+		background: -o-linear-gradient(top, white, $clouds);
+		background: -ms-linear-gradient(top, white, $clouds);
+		background: linear-gradient(top, white, $clouds);
+
+		border-radius: 0px 0px 5px 5px;
+
+		padding-bottom: 25px;
+	}
+
 	#create-todo {
 		height: 75px;
 	}
@@ -91,10 +148,18 @@ button {
 				.display {
 					height: 100%;
 					.todo-content {
+						padding-left: 20px;
 						display: inline-block;
 						width: 90%;
 						line-height: 75px;
 						font-size: 2em;
+
+						-webkit-text-shadow: 0px 2px $silver;
+						-moz-text-shadow: 0px 2px $silver;
+						-o-text-shadow: 0px 2px $silver;
+						-ms-text-shadow: 0px 2px $silver;
+						text-shadow: 0px 2px $silver;
+
 					}
 					.check {
 						display: inline-block;
