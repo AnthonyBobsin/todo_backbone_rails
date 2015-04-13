@@ -119,18 +119,6 @@ button {
 	}
 
 	#todos, #aboutPage {
-		background: white;
-		border: $clouds;
-
-		background: -webkit-linear-gradient(top, white, $clouds);
-		background: -moz-linear-gradient(top, white, $clouds);
-		background: -o-linear-gradient(top, white, $clouds);
-		background: -ms-linear-gradient(top, white, $clouds);
-		background: linear-gradient(top, white, $clouds);
-
-		border-radius: 0px 0px 5px 5px;
-
-		padding-bottom: 25px;
 	}
 
 	#create-todo {

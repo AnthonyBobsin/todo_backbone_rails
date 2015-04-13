@@ -1,7 +1,9 @@
-Todo.Views.TodosIndex = Backbone.View.extend({
+Todo.Views.TodosIndex = Marionette.CompositeView.extend({
 
   // Assign template element for this View
   template: JST['todos/index'],
+
+  childView: Todo.Views.Todo,
 
   // Events hash
   events: {
@@ -12,7 +14,7 @@ Todo.Views.TodosIndex = Backbone.View.extend({
 
   initialize: function() {
     // listen for reset to render whole collection or add to append new entry
-  	this.collection.on('reset', this.render, this);
+  	//this.collection.on('reset', this.addAll);
   	this.collection.on('add', this.appendEntry, this);
     this.collection.on('remove', this.render, this);
   },
@@ -24,6 +26,10 @@ Todo.Views.TodosIndex = Backbone.View.extend({
     // Loop through collection and append all entries
   	this.collection.each(this.appendEntry, this);
   	return this;
+  },
+
+  addAll: function() {
+    this.collection.each(this.appendEntry);
   },
 
   // Append the todo view onto the ul

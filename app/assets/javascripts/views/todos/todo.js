@@ -1,4 +1,4 @@
-Todo.Views.Todo = Backbone.View.extend({
+Todo.Views.Todo = Marionette.CompositeView.extend({
 
 	// Load template for each single todo
 	template: JST['todos/todo'],
